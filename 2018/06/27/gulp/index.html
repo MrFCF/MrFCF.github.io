@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>树先生的个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="gulp构建工具的使用 全局安装glup工具npm install –global gulp-cli 在项目中devDependencies中安装gulpnpm install –save-dev gulp gulpfile.js在项目的根部创建一个： 运行gulp gulp默认的任务将会运行要运行单个任务，请使用gulp&amp;lt; task &amp;gt;&amp;lt; othertask &amp;gt;.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树先生的个人博客">
+<meta property="og:url" content="http://yoursite.com/2018/06/27/gulp/index.html">
+<meta property="og:site_name" content="树先生的个人博客">
+<meta property="og:description" content="gulp构建工具的使用 全局安装glup工具npm install –global gulp-cli 在项目中devDependencies中安装gulpnpm install –save-dev gulp gulpfile.js在项目的根部创建一个： 运行gulp gulp默认的任务将会运行要运行单个任务，请使用gulp&amp;lt; task &amp;gt;&amp;lt; othertask &amp;gt;.">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/gulp/gulp1.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/gulp/gulp2.png">
+<meta property="og:image" content="http://yoursite.com/2018/06/27/gulp/gulp3.png">
+<meta property="og:updated_time" content="2018-06-27T09:08:08.788Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树先生的个人博客">
+<meta name="twitter:description" content="gulp构建工具的使用 全局安装glup工具npm install –global gulp-cli 在项目中devDependencies中安装gulpnpm install –save-dev gulp gulpfile.js在项目的根部创建一个： 运行gulp gulp默认的任务将会运行要运行单个任务，请使用gulp&amp;lt; task &amp;gt;&amp;lt; othertask &amp;gt;.">
+<meta name="twitter:image" content="http://yoursite.com/2018/06/27/gulp/gulp1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="树先生的个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">树先生的个人博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">菜鸟驿站</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/06/27/gulp/" class="article-date">
+  <time datetime="2018-06-27T07:21:33.401Z" itemprop="datePublished">2018-06-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="gulp构建工具的使用"><a href="#gulp构建工具的使用" class="headerlink" title="gulp构建工具的使用"></a>gulp构建工具的使用</h1><ol>
+<li>全局安装glup工具<br><br><br><strong>npm install –global gulp-cli</strong></li>
+<li>在项目中devDependencies中安装gulp<br><br><br><strong>npm install –save-dev gulp</strong></li>
+<li>gulpfile.js在项目的根部创建一个：<br><br><br><img src="./gulp1.png" alt="默认启动"></li>
+<li>运行gulp<br><br><blockquote>
+<p>gulp<br><br><br>默认的任务将会运行<br><br><br>要运行单个任务，请使用gulp&lt; task &gt;&lt; othertask &gt;.</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="gulp插件的使用"><a href="#gulp插件的使用" class="headerlink" title="gulp插件的使用"></a>gulp插件的使用</h1><ol>
+<li>首先先引入你要使用的插件<br><img src="./gulp2.png" alt="插件使用"><blockquote>
+<p>gulp.src 用来获取你写的scss文件的地址<br><br> s.pipe(fn)方法传入方法的是一个function，这个function作用无非是接受上一个流（stream）的结果，并返回一个处理后流的结果(返回值应该是一个stream对象)。<br>options.bundleExec(布尔值，默认值：false)<br><br><br>当这个选项为真时，bundle exec scss用来代替scss。否则， scss用来代替bundle exec scss<br><br><br>gulp.dest(为当编辑完成后的css文件的输出位置)</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="运行gulp代码和监听watch"><a href="#运行gulp代码和监听watch" class="headerlink" title="运行gulp代码和监听watch"></a>运行gulp代码和监听watch</h1><p><strong>运行gulp</strong><br><img src="./gulp3.png" alt="运行gulp"></p>
+<blockquote>
+</blockquote>
+<ol>
+<li>gulp.watch第一个参数 为要监视的文件匹配模式 <strong>./templates/*.hbs</strong>为所有templates文件目录下的以.hbs结尾的文件</li>
+<li>第二个参数是一个数组为一个可选的配置对象 </li>
+<li>第三个参数是一个回掉函数，每当监视文件发生变化时，就会调用这个函数，并且会给他传入一个对象，该对像包含了文件发生变化的一些信息，type属性为变数的类型 例如：  <blockquote>
+<p>gulp.watch(‘js/*<em>/</em>.js’,function(event){<br> console.log(event.type);变化类型<br>})</p>
+</blockquote>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/06/27/gulp/" data-id="cjixy37s00000d8raltdt26tt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">June 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/06/27/gulp/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Mr.three<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
